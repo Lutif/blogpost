@@ -1,0 +1,15 @@
+<%- include('header') -%>
+<div class="mainContent editor">
+    <form action="/compose" method="post">
+        <label class='composeTitle' for=""> Title </label>
+        <input class='composeInput' type="text" name= 'title' placeholder="Enter post title here ">
+        <label class='composePost' for="">Post</label>
+        <textarea class='composeTextArea'name="post" id="" cols="30" rows="12" placeholder="Enter your post here"></textarea>
+        <button class='composeButton' type="submit">Creat a post</button>
+    </form>
+
+</div>
+
+
+
+<%- include('footer') -%>

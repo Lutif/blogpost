@@ -1,0 +1,15 @@
+<%- include('header') -%>
+        <main class='mainContent'>
+        <h1>home</h1>
+        <p> <%= content %></p>
+        <div class="separator"></div>
+        <div class="otherPosts">
+            <% for (let i=0 ; i<posts.length; i++ ){ %>
+            <h3><%= posts[i].heading %></h3>
+            <p class='otherPost'> <%= posts[i].body %> <a href="http://"></a> </p>
+            <% } %>
+        </div>
+        <script src="" async defer></script>
+        </main>
+    <%- include('footer') -%>
+    
