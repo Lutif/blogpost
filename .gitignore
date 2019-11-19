@@ -1,5 +1,6 @@
 #ignore modules
 node_modules/
+extra/
 
 
 #ignore extra files
