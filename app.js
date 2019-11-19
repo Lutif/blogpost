@@ -5,14 +5,14 @@ const aboutStringConst = 'Lorem ipsum dolor sit, amet consectetur adipisicing el
 const contactStringConst = 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. mollitia adipisci molestiae';
 
 let postlist=[];
-postlist[0]={
-    heading: 'Day 1',
-    body:'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis doloremque eos esse? Qui iste ipsam quia aperiam reprehenderit, nam, temporibus mollitia adipisci molestiae eveniet quisquam nesciunt maxime nobis tenetur placeat.'
-         }
-postlist[1]={
-    heading: 'Day 2',
-    body:'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis doloremque eos esse? Qui iste ipsam quia aperiam reprehenderit, nam, temporibus mollitia adipisci molestiae eveniet quisquam nesciunt maxime nobis tenetur placeat.'
-         }
+// postlist[0]={
+//     heading: 'Day 1',
+//     body:'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis doloremque eos esse? Qui iste ipsam quia aperiam reprehenderit, nam, temporibus mollitia adipisci molestiae eveniet quisquam nesciunt maxime nobis tenetur placeat.'
+//          }
+// postlist[1]={
+//     heading: 'Day 2',
+//     body:'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis doloremque eos esse? Qui iste ipsam quia aperiam reprehenderit, nam, temporibus mollitia adipisci molestiae eveniet quisquam nesciunt maxime nobis tenetur placeat.'
+//          }
 
 
 //Requiring modules
@@ -47,6 +47,17 @@ app.get('/contact', function (req,res) {
 app.get('/compose', function(req, res){
     res.render('compose');
 });
+
+app.get('/post/:title', function(req, res){
+    let content ='';
+    let title=req.params.title;
+    postlist.forEach(function (post) {
+        if (post.heading===title){
+            content=post.body;
+        }
+    })
+    res.render('post' ,{title:title, content:content});
+    });
 
 app.post('/compose', function (req, res) {
     let title=req.body.title;
