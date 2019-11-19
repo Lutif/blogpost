@@ -1,0 +1,29 @@
+{
+  "name": "blogger",
+  "version": "1.0.0",
+  "description": "static blogging website ",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lutif/bogpost.git"
+  },
+  "keywords": [
+    "blog",
+    "project",
+    "portfolio"
+  ],
+  "author": "lutf",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lutif/bogpost/issues"
+  },
+  "homepage": "https://github.com/Lutif/bogpost#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^2.7.3",
+    "express": "^4.17.1"
+  }
+}

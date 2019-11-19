@@ -1,0 +1,6 @@
+#ignore modules
+node_modules/
+
+
+#ignore extra files
+*.zip
