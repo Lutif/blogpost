@@ -16,7 +16,9 @@ app.use(express.static('public'));
 app.use('view engine','ejs');
 
 
-
+app.get('/', function (req,res) {
+    
+});
 
 
 
